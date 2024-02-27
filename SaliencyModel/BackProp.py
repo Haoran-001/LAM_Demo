@@ -114,7 +114,7 @@ def Path_gradient(numpy_image, model, attr_objective, path_interpolation_func, c
 
 def saliency_map_PG(grad_list, result_list):
     final_grad = grad_list.mean(axis=0)
-    return final_grad, result_list[-1]
+    return final_grad, torch.tensor(result_list[-1])
 
 
 def saliency_map_P_gradient(
